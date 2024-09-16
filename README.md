@@ -1,7 +1,7 @@
 # Medical Image Classification using VGG16
 
 ## Overview
-This project focuses on building a deep learning model for classifying medical images, specifically chest X-rays, to identify various thoracic diseases. We utilize a pre-trained VGG16 architecture with custom layers added for fine-tuning. The model is trained on a dataset that includes images from multiple sources, with an emphasis on effective data preprocessing and augmentation techniques to enhance model performance.
+This project focuses on building a deep learning model for classifying medical images, specifically chest X-rays, to identify various thoracic diseases. I utilized a pre-trained VGG16 architecture with custom layers added for fine-tuning. The model is trained on a dataset that includes images from multiple sources, with an emphasis on effective data preprocessing and augmentation techniques to enhance model performance.
 
 ## Table of Contents
 - [Project Description](#project-description)
@@ -14,7 +14,7 @@ This project focuses on building a deep learning model for classifying medical i
 - [Contact](#contact)
 
 ## Project Description
-The objective of this project is to classify medical images, specifically chest X-rays, to detect various thoracic diseases using a deep learning approach. We leverage transfer learning with the VGG16 architecture pre-trained on ImageNet, modifying the model to suit our specific classification task. The project involves extensive data preprocessing and augmentation steps to ensure the model is trained on a robust dataset, improving its generalizability and performance on unseen data.
+The objective of this project is to classify medical images, specifically chest X-rays, to detect various thoracic diseases using a deep learning approach. I leveraged transfer learning with the VGG16 architecture pre-trained on ImageNet, modifying the model to suit the specific classification task. The project involves extensive data preprocessing and augmentation steps to ensure the model is trained on a robust dataset, improving its generalizability and performance on unseen data.
 
 ## Dataset
 - **Training Images**: Located in `s_train_final`, comprising images preprocessed and scaled to (224, 224) dimensions.
@@ -36,7 +36,7 @@ The preprocessing pipeline includes:
 5. **Augmentation of Image Data**: To prevent overfitting and increase the dataset's variability, we employed techniques such as rotation, width and height shifts, shearing, zooming, and horizontal flipping. These augmentations were applied in real-time during model training.
 
 ## Model Architecture
-We utilize a modified VGG16 architecture with the following specifications:
+I utilized a modified VGG16 architecture with the following specifications:
 - **Base Model**: VGG16 with pre-trained weights from ImageNet.
 - **Custom Layers**: 
   - A flattening layer followed by a fully connected dense layer with 256 units and ReLU activation.
@@ -44,7 +44,7 @@ We utilize a modified VGG16 architecture with the following specifications:
   - A final dense layer with softmax activation corresponding to the number of classes (diseases).
 - **Training Strategy**: 
   - The base VGG16 layers are frozen to retain learned features from ImageNet.
-  - Only the custom added layers are trained on the medical image dataset to fine-tune the model to our specific classification task.
+  - Only the custom added layers are trained on the medical image dataset to fine-tune the model to the specific classification task.
 
 ## Training and Evaluation
 The model was compiled with the Adam optimizer and categorical cross-entropy loss, optimized for multi-class classification. Key parameters include:
